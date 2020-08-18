@@ -1,0 +1,108 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+/* 使颜色填充整个屏幕 */
+html{
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.content{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.sun{
+    width: 700px;
+    height: 700px;
+    position: absolute;
+    border-radius: 50%;
+    top: -250px;
+    left: 400px;
+    background-image: radial-gradient(350px at center center,red,yellow,black);
+    z-index: 11;
+}
+.star{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.star1{
+    background: url('../img/midground.png');
+    animation: starmove 100s infinite;
+}
+.star2{
+    background: url('../img/foreground.png');
+    animation: starmove 10s linear infinite;
+    z-index: 15;
+}
+
+@keyframes starmove{
+    0%{
+        background-position: 0px,0px;
+    }
+    100%{
+        background-position: 500px 500px;
+    }
+}
+.state{
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background-image: linear-gradient(0,rgba(146,134,92) 15%,#fcf7c5 40%,#F4F1BC 60%,#D4C58A 70%,#CDC197 80%);
+    border-radius: 50%;
+    box-shadow: 0 0 50px 3px #fbfaee;
+    top: 240px;
+    left: 10px;
+    animation: staterotate 15s linear infinite;
+}
+@keyframes staterotate{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.eath{
+    background-image: url(../img/dq.png);
+    background-size: 100% 100%;
+    border-radius: 50%;
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    right: -150px;
+    bottom: -150px;
+    z-index: 10;
+    animation: eathrotate 15s linear reverse infinite;
+}
+@keyframes eathrotate{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.moon{
+    width: 500px;
+    height: 353px;
+    background-image: url(../img/yq.png);
+    background-size: 100% 100%;
+    position: absolute;
+    bottom: -150px;
+    right: -150px;
+    animation: moonrotate 20s linear reverse infinite;
+}
+@keyframes moonrotate{
+    0%{
+        transform: rotate(0deg) translateX(800px);
+    }
+    0%{
+        transform: rotate(360deg) translateX(800px);
+    }
+}
